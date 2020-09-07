@@ -1,36 +1,38 @@
-# Frontend-assessment - Searchable Select List
+# Front-end Assessment - Searchable Select List/Autocomplete Combobox
 
 ## Overview
+
 We'd like you to create a searchable select list that retrieves Marvel characters from our Superhero API.
 
 The style and behaviour of the select list should match the images shown below.
 
 ## Prerequisites
+
 1. Node.js and NPM installed on your local machine
 
 ## API set-up
 
-Within this repo is an api folder that contains a script for running a local rest-api and some data.
+Within this repo is an api folder that contains a script for running a local REST server and some data.
 
 The server can be started with:
 
-```npm install```
+`npm install`
 
-```npm start```
+`npm start`
 
 ### Request
 
 To retrieve a list of all characters:
 
-```GET http://localhost:1337/superheroes ```
+`GET http://localhost:1337/superheroes `
 
 To query for characters by their name:
 
-```GET http://localhost:1337/superheroes?name_like=Iron```
+`GET http://localhost:1337/superheroes?name_like=Iron`
 
 This can be combined with filtering by other fields
 
-```GET http://localhost:1337/superheroes?name_like=Iron&work.base_like=New%20York```
+`GET http://localhost:1337/superheroes?name_like=Iron&work.base_like=New%20York`
 
 Details and more advanced queries can be found [here](https://github.com/typicode/json-server#routes)
 
@@ -100,35 +102,54 @@ An example response can be seen below.
 ]
 ```
 
-## Mandatory Requirements
-- Must be completed in react (redux is optional)
-- Cannot use third party search select library
-- Behaviour and style should be the same as shown in the images below. You can choose which fields you want to use for the description. 
-- Items in the list should be selectable via a mouse click. On select, the character name should be written to the console.
-- A loader should be shown when the results are being queried from the API
+## Requirements
+
+- Must be completed in Vue or React (you're welcome to scaffold the project using a starter kit).
+- Cannot use a third party search select/autocomplete combobox library.
+- Behaviour and style roughly equal the [designs](#designs) below. You can choose which fields you want to use for the description. 
+- Items in the list should be selectable via a mouse click and Enter key. On select, the character name should be written to the console.
+- A spinner should be shown when the results are being queried from the API.
+
+## Bonus Points
+
+- Think about the accessibility requirements and considerations of building this solution.
+- Pay attention to the CSS architecture as much as the JavaScript architecture.
+
+## Guidance on Time Spent
+
+While you should be free to decide how much time you'd like to spend developing your solution, in the interests of not taking up all your time, we strongly advise to limit yourself to five hours or less.
 
 ## Submission
-The submission should be committed to Github and a link provided to the submission along with a readme on how to setup and run the solution. The solution is expected to incorporate good software development practices such as comments and tests.
+
+The submission should be committed to Github and a link provided to the submission along with a README on how to setup and run the solution. If you run out of time, detail in the README what else you would have liked to achieve.
+
+The solution is expected to incorporate good software development practices such as comments, tests and a sensible architecture.
 
 **If you have any problems with this assessment, you can create a GitHub issue that will be answered shortly by one of the Hireup development team or email us directly at tech@hireup.com.au**
 
-## Examples
+## Designs
 
-Example 1 - Closed Select
+### Desktop - Closed
+
 ![Screenshot1](https://i.imgur.com/9ooq75J.jpg)
 
-Example 2 - Opened Select
+### Desktop - Opened with results
+
 ![Screenshot2](https://i.imgur.com/LIlF1Bd.jpg)
 
-Example 3 - No Results Select
+### Desktop - Opened with no results
+
 ![Screenshot3](https://i.imgur.com/SmLh1sZ.jpg)
 
-Mobile Example 1 - Closed Select
+### Mobile - Closed
+
 ![ScreenShot4](https://i.imgur.com/KUaenjW.jpg)
 
-Mobile Example 2 - Opened Select
+### Mobile - Opened with results
+
 ![ScreenShot5](https://i.imgur.com/KAJvi1s.jpg)
 
-Mobile Example 3 - No Results Select
+### Mobile - Opened with no results
+
 ![ScreenShot6](https://i.imgur.com/0938RCR.jpg)
 
